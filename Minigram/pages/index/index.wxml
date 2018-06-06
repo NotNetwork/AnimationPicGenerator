@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}"> 获取头像昵称 </button>
+    <block wx:else>
+      <image src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='blocks'>
+    <view wx:for="{{blocks}}" wx:key="*this" style="background:red;height:110rpx;width:435rpx">
+      <button size="mini" wx:for="{{item}}" wx:key="*this" style="background:yellow;height:100rpx;width:100rpx;margin:5rpx">
+      {{item}}
+      </button>
+    </view>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

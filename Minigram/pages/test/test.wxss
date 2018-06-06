@@ -1,0 +1,12 @@
+/* pages/test/test.wxss */
+.uploader_img {
+  display: block;
+  width: 279px;
+}
+
+.imgcontainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

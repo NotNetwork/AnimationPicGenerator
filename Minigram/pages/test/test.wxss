@@ -1,7 +1,35 @@
 /* pages/test/test.wxss */
+page{
+  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528391659812&di=e3219c7825f9e4691c635239f1202406&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201508%2F14%2F20150814215336_HGEfX.jpeg);
+}
+
+.body{
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+
+}
+
+.buttoncontainer{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+}
+
+.buttoncontainer button{
+  margin: 3px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;
+}
+
 .uploader_img {
   display: block;
-  width: 279px;
+  height: 179px;
 }
 
 .imgcontainer{
@@ -10,3 +38,19 @@
   align-items: center;
   justify-content: center;
 }
+
+.pickercontainer{
+  border-top: solid;
+  border-bottom: solid;
+  background-color: #fcfcfc;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+ .pickercontainer picker{
+   background-color: #fbfbfb;
+   padding-left: 20px;
+   padding-right: 20px; 
+   
+ }

@@ -10,6 +10,8 @@ Page({
     imgsrc:'',
     retsrc:'',
     hidden: true,
+    Type: ['Black_Hair', 'Blond_Hair', 'Brown_Hair', 'Male', 'Young'],
+    Typeindex: 0,
   },
 
   /**
@@ -98,22 +100,65 @@ Page({
       hidden: false,
     })
     uploadTask = wx.uploadFile({
-      url: 'http://162.105.192.81:5000/',
+      url: 'http://222.29.98.44:8080/',
       filePath: that.data.imgsrc,
       name: 'img',
       formData: {
-        attr:[0,0,0,0,1]
+        attr: that.data.Type[that.data.Typeindex],
+        filename: that.data.imgsrc,
       },
       success: function(res){
         console.log(res.data);
+        var ret = JSON.parse(res.data);
         that.setData({
-          retsrc: res.data.url,
+          retsrc: ret.url,
           hidden: true,
         })
+        that.download(ret.url)
       },
       fail: function(){
         console.log('fail');
       }
+    })
+   
+    uploadTask.onProgressUpdate((res) => {
+      console.log('上传进度', res.progress)
+      console.log('已经上传的数据长度', res.totalBytesSent)
+      console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend);
+    })
+  },
+
+  download: function (filename) {
+    var that = this
+    wx.downloadFile({
+      url: filename,
+      header: {},
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          retsrc: res.tempFilePath
+        })
+      },
+      fail: function (res) {
+        console.log('fail')
+      },
+      complete: function (res) { },
+    })
+  },
+
+  test:function(){
+    wx.request({
+      url: 'http://222.29.98.44:8080/img/img.jpg',
+      method: 'GET',
+      success:function(res){
+        console.log(res.data);
+      }
+    })
+  },
+
+  TypeChange: function (e) {
+    this.setData({
+      Typeindex: e.detail.value
     })
   },
 })

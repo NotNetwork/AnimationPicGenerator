@@ -77,7 +77,7 @@ Page({
       success: function (res) {
         console.log(res)
         that.setData({
-          imgsrc: res.tempFilePaths
+          imgsrc: res.tempFilePaths[0]
         })
       }
     })
@@ -98,11 +98,11 @@ Page({
       hidden: false,
     })
     uploadTask = wx.uploadFile({
-      url: '',
-      filePath: imgsrc,
+      url: 'http://162.105.192.81:5000/',
+      filePath: that.data.imgsrc,
       name: 'img',
       formData: {
-        
+        attr:[0,0,0,0,1]
       },
       success: function(res){
         console.log(res.data);
@@ -115,7 +115,5 @@ Page({
         console.log('fail');
       }
     })
-    
-
   },
 })

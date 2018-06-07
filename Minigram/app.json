@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/test/test",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/test/test"
+    "pages/logs/logs"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -13,17 +14,17 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "homepage",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_selected.png"
-      },
-      {
         "pagePath": "pages/test/test",
         "text": "test",
         "iconPath": "images/search.png",
         "selectedIconPath": "images/search_selected.png"
-      }      
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "homepage",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      }
     ]
   }
 }

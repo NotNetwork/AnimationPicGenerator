@@ -1,0 +1,137 @@
+/* pages/main/main.wxss */
+page{
+  background-color: rgba(77,73,96,0.8);
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.body{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.imgContainer{
+  width: 340px;
+  height: 240px;
+  display: inline-flex;
+  padding: 0;
+}
+
+.imgContainer .bgimg{
+  width: 0;
+  position:relative;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.imgContainer #bgimg1{
+  width: 340px;
+  height: 240px;
+}
+
+.imgContainer #label1{
+  width: 0;
+  height: 0;
+  position:relative;
+  top: 95px;
+  left: 60px;
+  z-index: 1;
+}
+
+.imgContainer #choose{
+  width: 50px;
+  height: 50px;
+}
+
+.imgContainer #bgimg2{
+  width: 170px;
+  height: 240px;
+}
+
+.imgContainer #bgimg3{
+  width: 50px;
+  height: 50px;
+  position:relative;
+  top: 95px;
+  left: -25px;
+}
+
+.imgContainer #bgimg4{
+  width: 80px;
+  height: 80px;
+  position:relative;
+  top: 80px;
+  left: 45px;
+}
+
+.input_image{
+  width: 170px;
+}
+
+.input_image image{
+  width: 100%;
+  height: 100%;
+}
+
+#photo{
+  width: 50px;
+  height: 50px;
+}
+
+.output_image{
+  width: 170px;
+}
+
+.output_image image{
+  width: 100%;
+}
+
+.pickerContainer{
+  display: inline-flex;
+  width: 100%;
+}
+
+.pickerContainer picker{
+  width: 33%;
+  text-align: center;
+  margin: 10px;
+  padding: autp;
+  vertical-align: middle;
+  border: solid;
+  border-color: rgba(255,255,255,1);
+  border-width: 1px;
+}
+
+.pickerContainer picker view{
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+#picker1{
+  background-color: #3f6e78;
+}
+
+#picker2{
+  background-color: #934754;
+}
+
+#picker3{
+  background-color: #da9b4c;
+}
+
+.buttonContainer{
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.buttonContainer label{
+  margin-left: 20px;
+  margin-right: 20px;
+}

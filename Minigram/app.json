@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/main/main",
     "pages/test/test",
     "pages/index/index",
-    "pages/logs/logs"
-    
+    "pages/logs/logs"    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -13,6 +13,12 @@
   },
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "main",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add_selected.png"
+      },
       {
         "pagePath": "pages/test/test",
         "text": "test",

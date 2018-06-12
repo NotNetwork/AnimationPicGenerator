@@ -1,6 +1,7 @@
 /* pages/test/test.wxss */
 page{
   background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528391659812&di=e3219c7825f9e4691c635239f1202406&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201508%2F14%2F20150814215336_HGEfX.jpeg);
+  background-size: 100%, 100%;
 }
 
 .body{
@@ -28,6 +29,7 @@ page{
 }
 
 .uploader_img {
+  opacity: 1;
   display: block;
   height: 179px;
 }
@@ -37,6 +39,9 @@ page{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: double;
+  
 }
 
 .pickercontainer{

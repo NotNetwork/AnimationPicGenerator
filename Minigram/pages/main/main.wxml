@@ -1,0 +1,64 @@
+<view class='body'>
+  <view class='imgContainer'>
+
+    <view class='bgimg'>
+      <image id='bgimg1' src='../../images/14.png'></image>
+    </view>
+
+    <label hidden='{{imginput}}' id='label1'>
+      <button hidden bindtap='chooseimg'></button>
+      <image id='choose' src='../../images/1.png'></image>
+    </label>
+
+    <view class='input_image'>
+      <image src='{{imgsrc}}'></image>
+    </view>
+
+    <view class='bgimg'>
+      <image id='bgimg2' src='../../images/9.png'> </image>
+    </view>
+
+    <view class='bgimg' style='z-index:10;'>
+      <image id='bgimg3' src='../../images/15.png'></image>
+    </view>
+
+    <view class='bgimg'>
+      <image id='bgimg4' src='../../images/2.png'></image>
+    </view>
+
+    <view class='output_image'>
+      <image src='{{retsrc}}'></image>
+    </view>
+    
+  </view>
+
+  <view class='pickerContainer'>
+    <picker range="{{Type1}}" bindchange="TypeChange" value="{{Typeindex1}}" mode="selector" id='picker1'>
+      <view class="weui-input" style='text-align:center;'>{{Type1[Typeindex1]}}</view>
+    </picker>
+    <picker range="{{Type2}}" bindchange="TypeChange" value="{{Typeindex2}}" mode="selector" id='picker2'>
+      <view class="weui-input" style='text-align:center;'>{{Type2[Typeindex2]}}</view>
+    </picker>
+    <picker range="{{Type3}}" bindchange="TypeChange" value="{{Typeindex3}}" mode="selector" id='picker3'>
+      <view class="weui-input" style='text-align:center;'>{{Type3[Typeindex3]}}</view>
+    </picker>
+  </view>
+
+  <view style='height:50px; width:100%;'></view>
+  
+  <view class='buttonContainer'>
+    <label>
+      <button hidden bindtap='submit'></button>
+      <image src='../../images/13.png' style='width:100px;height:100px;'></image>
+    </label>
+
+    <label>
+      <button hidden bindtap='reset'></button>
+      <image src='../../images/16.png' style='width:100px;height:100px;'></image>
+    </label>
+  </view>
+
+  <loading hidden='{{hidden}}'>
+    waiting
+  </loading>
+</view>
